@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/Activity_Result_Textview_EmptyList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Activity_Result_Textview_EmptyList"
+        android:textSize="14sp"
+        android:textColor="@color/grey_light"
+        android:textStyle="italic"
+        android:layout_centerInParent="true" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/Activity_Result_refresher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/Activity_Result_listivew"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minWidth="25dp"
+            android:minHeight="25dp" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

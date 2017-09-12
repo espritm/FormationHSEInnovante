@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/Activity_Questions_refresher"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/Activity_Questions_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/Activity_Questions_listivew"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minWidth="25dp"
+            android:minHeight="25dp" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_marginTop="20dp"
+      android:id="@+id/Activity_Questions_button"
+      android:text="@string/Activity_Questions_buttonValid"
+      android:theme="@style/ButtonGreenBackground" />
+</RelativeLayout>

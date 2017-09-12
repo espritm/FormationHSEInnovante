@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, Click Me!</string>
+	<string name="app_name">Formation HSE Innovante</string>
+  <string name="fragmentListResult_textview_emptyList">Aucun résultat</string>
+  <string name="menu_accueil_menu1">Menu 1</string>
+  <string name="menu_accueil_menu2">Menu 2</string>
+  <string name="menuNavigationViewAccueil_accueil">Accueil</string>
+  <string name="menuNavigationViewAccueil_start">Commencer le test</string>
+  <string name="menuNavigationViewAccueil_sectionParam">Paramètres</string>
+  <string name="menuNavigationViewAccueil_legal">Mentions légales</string>
+  <string name="menuNavigationViewAccueil_cgu">CGU</string>
+  <string name="unknownError">Une erreur est survenue...</string>
+  <string name="fragmentLegalTerms_textview_TitleRespHSE">Responsable de thèse HSE</string>
+  <string name="fragmentLegalTerms_textview_DescRespHSE">Camille SARTORI</string>
+  <string name="fragmentLegalTerms_textview_TitleEditor">Editeur de l\'application</string>
+  <string name="fragmentLegalTerms_textview_DescEditor">Auto-entreprise ESPRIT Maxime – SIRET : 81962665600014\n8, rue henry duffourd – 38000 Grenoble – France\nMail : maxime.esprit@gmail.com\nTel : 0613868302\nSite-web : <a href="http://www.maximeesprit.com">www.maximeesprit.com</a>"</string>
+  <string name="fragmentLegalTerms_textview_TitleHost">Hébergeur</string>
+  <string name="fragmentLegalTerms_textview_DescHost">Aucun.</string>
+  <string name="activity_question_title">Question {0} / {1}</string>
+  <string name="Activity_Questions_buttonValid">Terminer</string>
+  <string name="Activity_Questions_buttonNext">Suivant</string>
+  <string name="menu_question_previous">Précédent</string>
+  <string name="Activity_Result_Textview_EmptyList">Aucun outil de formation proposé durant ce test.</string>
+  <string name="menu_accueil_removeResults">Supprimer les résultats</string>
+  <string name="Item_Display_Outil_Button_ContactUs">Contactez-nous pour un scénario personnalisé !</string>
+</resources>

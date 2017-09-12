@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+  <style name="QuelleFormationSecurite" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="colorPrimary">@color/primary</item>
+    <item name="colorPrimaryDark">@color/primary_dark</item>
+    <item name="colorAccent">@color/primary_light</item>
+  </style>
+
+  
+  <style name="Theme.Splash" parent="@android:style/Theme">
+    <item name="android:windowBackground">@drawable/splash_background</item>
+    <item name="android:windowNoTitle">true</item>
+  </style>
+
+  
+  <style name="BorderlessButtonBase" parent="Widget.AppCompat.Button.Borderless">
+    <item name="android:textSize">14sp</item>
+    <item name="android:gravity">center</item>
+    <item name="android:padding">10dp</item>
+    <item name="colorControlHighlight">?attr/colorAccent</item>
+  </style>
+
+  <style name="ButtonGreenBackground" parent="BorderlessButtonBase">
+    <item name="colorButtonNormal">?attr/colorPrimary</item>
+    <item name="android:textColor">@color/white</item>
+  </style>
+
+</resources>
