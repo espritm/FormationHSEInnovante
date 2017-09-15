@@ -24,7 +24,7 @@ namespace QuelleFormationSecurite.Helpers
             {
                 res = JsonConvert.DeserializeObject<T>(value);
             }
-            catch (Exception e)
+            catch (Exception)
             {
             }
 
@@ -39,7 +39,7 @@ namespace QuelleFormationSecurite.Helpers
             {
                 res = JsonConvert.SerializeObject(item);
             }
-            catch (Exception e)
+            catch (Exception)
             {
             }
 

@@ -150,7 +150,7 @@ namespace QuelleFormationSecurite.Droid.Activities
             if ((q1.m_lsAnswer.Find(a => a.m_sTitle == "Entre 1 et 5").m_bIsSelected || q1.m_lsAnswer.Find(a => a.m_sTitle == "Entre 6 et 10").m_bIsSelected) &&
                 q4.m_lsAnswer.Find(a => a.m_sTitle == "Un animateur de formation").m_bIsSelected &&
                 ( q4.m_lsAnswer.Find(a => a.m_sTitle == "Une enveloppe budgétaire pour d'éventuels éléments de jeux (téléphones plastiques, etc...)").m_bIsSelected ||
-                  q4.m_lsAnswer.Find(a => a.m_sTitle == "Une ou plusieurs tablettes").m_bIsSelected ||
+                  q4.m_lsAnswer.Find(a => a.m_sTitle == "Une ou plusieurs tablette(s)").m_bIsSelected ||
                   q4.m_lsAnswer.Find(a => a.m_sTitle == "Les personnes formées disposent de smartphone").m_bIsSelected))
             {
                 m_Result.m_lsOutil.Add(m_lsOutil.Find(o => o.m_iID == 3));
@@ -199,25 +199,24 @@ namespace QuelleFormationSecurite.Droid.Activities
 
             m_lsQuestions = new List<TestQuestion>();
 
-            TestQuestion q1 = new TestQuestion(1, "Quel est le nombre de personnes formées ?", EnumAnswerType.Radiobutton);
+            TestQuestion q1 = new TestQuestion(1, "Quel est le nombre de personnes à former ?", EnumAnswerType.Radiobutton);
             q1.AddAnswer(new QuestionAnswer("Entre 1 et 5"));
             q1.AddAnswer(new QuestionAnswer("Entre 6 et 10"));
             q1.AddAnswer(new QuestionAnswer("Plus de 11"));
             m_lsQuestions.Add(q1);
 
-            TestQuestion q2 = new TestQuestion(2, "Quelle est la moyenne d'âge des personnes formées ?", EnumAnswerType.Radiobutton);
-            q2.AddAnswer(new QuestionAnswer("Entre 14 et 20 ans"));
-            q2.AddAnswer(new QuestionAnswer("Entre 21 et 28 ans"));
+            TestQuestion q2 = new TestQuestion(2, "Quelle est la moyenne d'âge des personnes à former ?", EnumAnswerType.Radiobutton);
+            q2.AddAnswer(new QuestionAnswer("Entre 14 et 18 ans"));
+            q2.AddAnswer(new QuestionAnswer("Entre 19 et 28 ans"));
             q2.AddAnswer(new QuestionAnswer("Entre 29 et 39 ans"));
             q2.AddAnswer(new QuestionAnswer("Plus de 39 ans"));
             m_lsQuestions.Add(q2);
 
-            TestQuestion q3 = new TestQuestion(3, "Quelle est l'expérience des personnes formées dans un environnement comportant des risques similaire à votre entreprise ?", EnumAnswerType.Radiobutton);
-            q3.AddAnswer(new QuestionAnswer("Aucun expérience dans ce type de milieux à risque"));
-            q3.AddAnswer(new QuestionAnswer("Moins d'un an d'expérience dans ce type de milieux à risque"));
-            q3.AddAnswer(new QuestionAnswer("Entre un et trois ans d'expérience dans ce type de milieux à risque"));
-            q3.AddAnswer(new QuestionAnswer("Plus de trois ans d'expérience dans ce type de milieux à risque"));
-            q3.AddAnswer(new QuestionAnswer("C'est mitigé : certaines personnes formées ont de l'expérience dans ce type de milieux à risque, d'autres non"));
+            TestQuestion q3 = new TestQuestion(3, "Les personnes à former ont-elles déjà travaillé dans un environnement similaire à votre entreprise ?", EnumAnswerType.Radiobutton);
+            q3.AddAnswer(new QuestionAnswer("Non, jamais"));
+            q3.AddAnswer(new QuestionAnswer("Oui, moins de 6 mois"));
+            q3.AddAnswer(new QuestionAnswer("Oui, plus de 6 mois"));
+            q3.AddAnswer(new QuestionAnswer("C'est mitigé : certaines personnes oui, d'autres non"));
             m_lsQuestions.Add(q3);
 
             TestQuestion q4 = new TestQuestion(4, "Quels sont les moyens à votre disposition pour la formation ?", EnumAnswerType.Checkbox);
@@ -225,38 +224,39 @@ namespace QuelleFormationSecurite.Droid.Activities
             q4.AddAnswer(new QuestionAnswer("Une salle de formation"));
             q4.AddAnswer(new QuestionAnswer("Un ordinateur et un vidéo-projecteur"));
             q4.AddAnswer(new QuestionAnswer("Un tableau blanc"));
-            q4.AddAnswer(new QuestionAnswer("Une ou plusieurs tablettes"));
-            q4.AddAnswer(new QuestionAnswer("Une ou plusieurs lunette de réalité virtuelle (VR)"));
+            q4.AddAnswer(new QuestionAnswer("Une ou plusieurs tablette(s)"));
+            q4.AddAnswer(new QuestionAnswer("Une ou plusieurs lunette(s) de réalité virtuelle (VR)"));
             q4.AddAnswer(new QuestionAnswer("Une enveloppe budgétaire pour d'éventuels éléments de jeux (téléphones plastiques, etc...)"));
             q4.AddAnswer(new QuestionAnswer("Les personnes formées disposent de smartphone"));
             m_lsQuestions.Add(q4);
 
-            TestQuestion q5 = new TestQuestion(5, "Quels sont les types des futurs lieux de travail des personnes formées ?", EnumAnswerType.Checkbox);
-            q5.AddAnswer(new QuestionAnswer("Chantier BTP"));
-            q5.AddAnswer(new QuestionAnswer("Travail en hauteur"));
-            q5.AddAnswer(new QuestionAnswer("Usine"));
-            q5.AddAnswer(new QuestionAnswer("Usine chimique"));
-            q5.AddAnswer(new QuestionAnswer("Salle blanche"));
-            q5.AddAnswer(new QuestionAnswer("Risque incendie élevé"));
-            q5.AddAnswer(new QuestionAnswer("Voie publique"));
-            q5.AddAnswer(new QuestionAnswer("Espaces clos"));
-            q5.AddAnswer(new QuestionAnswer("Bureau"));
+            TestQuestion q5 = new TestQuestion(5, "Dans quels milieux vont travailler les personnes à former ?", EnumAnswerType.Checkbox);
+            q5.AddAnswer(new QuestionAnswer("Bureaux (tercière)"));
+            q5.AddAnswer(new QuestionAnswer("Ateliers (production)"));
+            q5.AddAnswer(new QuestionAnswer("Logistique (transport & logistique)"));
+            q5.AddAnswer(new QuestionAnswer("Chantier (BTP ou autre)"));
+            q5.AddAnswer(new QuestionAnswer("Magasin (Commerce, distribution ou autre)"));
+            q5.AddAnswer(new QuestionAnswer("Laboratoire"));
             q5.AddAnswer(new QuestionAnswer("Autre"));
             m_lsQuestions.Add(q5);
 
-            TestQuestion q6 = new TestQuestion(6, "Y a t il des risques majeurs concernant votre entreprise qu'il faudrait inclure dans la formation ?", EnumAnswerType.Checkbox);
-            q6.AddAnswer(new QuestionAnswer("Risque incendie"));
-            q6.AddAnswer(new QuestionAnswer("Risque foudre"));
-            q6.AddAnswer(new QuestionAnswer("Risque explosion"));
-            q6.AddAnswer(new QuestionAnswer("Risque de chute"));
-            q6.AddAnswer(new QuestionAnswer("Risque électrique"));
-            q6.AddAnswer(new QuestionAnswer("Risque de manutention"));
-            q6.AddAnswer(new QuestionAnswer("Risque hygiène et maladies professionnelles"));
-            q6.AddAnswer(new QuestionAnswer("Risque chimique et matériaux"));
-            q6.AddAnswer(new QuestionAnswer("Risque chute d'objet"));
-            q6.AddAnswer(new QuestionAnswer("Risque liés à des machines ou outils"));
-            q6.AddAnswer(new QuestionAnswer("Risque travailleur isolé"));
-            q6.AddAnswer(new QuestionAnswer("Autre"));
+            TestQuestion q6 = new TestQuestion(6, "Y a-t-il des risques majeurs concernant votre entreprise qu'il faudrait inclure dans la formation ?", EnumAnswerType.Checkbox);
+            q6.AddAnswer(new QuestionAnswer("Risques de chutes de plain-pied & chutes en hauteur"));
+            q6.AddAnswer(new QuestionAnswer("Risques de manutention manuelle"));
+            q6.AddAnswer(new QuestionAnswer("Risques de manutention mécanisée"));
+            q6.AddAnswer(new QuestionAnswer("Risques de circulations & déplacements"));
+            q6.AddAnswer(new QuestionAnswer("Risques d’effondrements & chutes d’objets"));
+            q6.AddAnswer(new QuestionAnswer("Risques de toxicité"));
+            q6.AddAnswer(new QuestionAnswer("Risques d’incendies & explosions"));
+            q6.AddAnswer(new QuestionAnswer("Risques biologiques"));
+            q6.AddAnswer(new QuestionAnswer("Risques d’électricité"));
+            q6.AddAnswer(new QuestionAnswer("Risques de manque d’hygiène"));
+            q6.AddAnswer(new QuestionAnswer("Risques de bruits ou Risques de vibrations"));
+            q6.AddAnswer(new QuestionAnswer("Risques d’ambiances thermiques ou Risques d’ambiances lumineuses"));
+            q6.AddAnswer(new QuestionAnswer("Risques de rayonnements"));
+            q6.AddAnswer(new QuestionAnswer("Risques de machines & outils"));
+            q6.AddAnswer(new QuestionAnswer("Risques d’interventions en entreprises extérieures"));
+            q6.AddAnswer(new QuestionAnswer("Risques d’organisation du travail & Stress"));
             m_lsQuestions.Add(q6);
 
             m_adapter.RefreshListQuestions(m_lsQuestions, m_refresher.Height);
