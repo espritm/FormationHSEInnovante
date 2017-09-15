@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>QuelleFormationSecurite.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>QuelleFormationSecurite.iOS</AssemblyName>
+    <AssemblyName>QuelleFormationSecuriteiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>

@@ -14,7 +14,7 @@
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidApplication>True</AndroidApplication>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AssemblyName>QuelleFormationSecurite.Android</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
@@ -820,10 +820,10 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_jeux_question_reponse.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_moyen-technique.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_moyen_technique.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_moyens-humain.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_moyens_humain.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_nombre_optimal.png" />
@@ -847,10 +847,10 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_jeux_question_reponse.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_moyen-technique.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_moyen_technique.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_moyens-humain.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_moyens_humain.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\ic_nombre_optimal.png" />
@@ -874,10 +874,10 @@
     <AndroidResource Include="Resources\drawable-mdpi\ic_jeux_question_reponse.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_moyen-technique.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_moyen_technique.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_moyens-humain.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_moyens_humain.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-mdpi\ic_nombre_optimal.png" />
@@ -901,10 +901,10 @@
     <AndroidResource Include="Resources\drawable-xhdpi\ic_jeux_question_reponse.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_moyen-technique.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_moyen_technique.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_moyens-humain.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_moyens_humain.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\ic_nombre_optimal.png" />
@@ -928,10 +928,10 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_jeux_question_reponse.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_moyen-technique.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_moyen_technique.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_moyens-humain.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_moyens_humain.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_nombre_optimal.png" />
