@@ -4,6 +4,7 @@ using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Microsoft.Azure.Mobile.Analytics;
 using QuelleFormationSecurite.BusinessLayer;
 using QuelleFormationSecurite.Droid.Adapters;
 using QuelleFormationSecurite.Helpers;
@@ -202,6 +203,9 @@ namespace QuelleFormationSecurite.Droid.Activities
             lsResultsSettings.Add(m_Result);
             Settings.lsJsonResults = JSON.SerializeObject<List<TestResult>>(lsResultsSettings);
 
+            //Track event
+            Analytics.TrackEvent("Questionnaire répondu", m_Result.m_dicQuestionReponse);
+
             this.Finish();
         }
 
@@ -305,7 +309,7 @@ namespace QuelleFormationSecurite.Droid.Activities
             {
                 m_iID = 2,
                 m_sTitre = "Jeux de rôle sur une situation particulière dangereuse dans l’entreprise",
-                m_iImageResource = Resource.Drawable.ic_jeux_de_role_sur_situation_dangereuse,
+                m_iImageResource = Resource.Drawable.ic_jeux_de_role,
                 m_sObjectif = "Faire un focus particulier sur une situation dangereuse présente dans l’entreprise en impliquant les personnes à tenir des rôles différents pour apprendre à réagir correctement face à la situation dangereuse. C’est un outil stratégique de démarche de prévention.",
                 m_sPourquoi = "Si l’entreprise a des problématiques et/ou une accidentologie plus forte sur une situation dangereuse particulière, l’intérêt de cet outil est d’impliquer le personnel pour favoriser son apprentissage sur les bons gestes à effectuer/respecter pour éviter l’exposition à ce danger.",
                 m_sPublic = "Toute personne devant effectuer la formation générale à la sécurité. De 14 à 99 ans !",

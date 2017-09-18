@@ -9,6 +9,9 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 
 namespace QuelleFormationSecurite.Droid
 {
@@ -28,6 +31,11 @@ namespace QuelleFormationSecurite.Droid
         public override void OnCreate()
         {
             base.OnCreate();
+
+            MobileCenter.Start("a78ae0b8-b0e3-4f66-ba05-674ef185c031", typeof(Analytics), typeof(Crashes));
+
+            Analytics.SetEnabledAsync(true);
+            Crashes.SetEnabledAsync(true);
         }
     }
 }
