@@ -2,15 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
-  <TextView
+    android:orientation="vertical">  
+  <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="15dp"
-    android:textSize="22sp"
-    android:gravity="center"
-    android:textStyle="bold"
-    android:id="@+id/Item_Display_Outil_Textview_Title" />
+    android:orientation="horizontal"
+    android:gravity="center">
+    <ImageView
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:id="@+id/Item_Display_Outil_Imageview_Title"
+      android:tint="#737373"/>
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="15dp"
+      android:textSize="22sp"
+      android:gravity="center"
+      android:textStyle="bold"
+      android:id="@+id/Item_Display_Outil_Textview_Title" />
+  </LinearLayout>
   <android.support.v7.widget.CardView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -98,13 +109,26 @@
           android:layout_width="match_parent"
           android:layout_height="1px"
           android:background="@color/black" />
-      <TextView
+      <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Quel public " />
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_quel_public"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:tint="#737373"/>
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="5dp"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          android:text="Quel public " />
+      </LinearLayout>
       <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -120,21 +144,34 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
           android:background="@color/black" />
-      <TextView
+      <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Nombre optimal de participants " />
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:inputType="textMultiLine"
-        android:id="@+id/Item_Display_Outil_Textview_Participants" />
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_nombre_optimal"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:tint="#737373"/>
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="5dp"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          android:text="Nombre optimal de participants " />
+      </LinearLayout>
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="5dp"
+          android:textSize="16sp"
+          android:gravity="center"
+          android:inputType="textMultiLine"
+          android:id="@+id/Item_Display_Outil_Textview_Participants" />
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="1px"
@@ -142,13 +179,26 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
           android:background="@color/black" />
-      <TextView
+      <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Pour quel type d\'entreprise " />
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_type_entreprise"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:tint="#737373"/>
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="5dp"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          android:text="Pour quel type d\'entreprise " />
+      </LinearLayout>
       <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -164,13 +214,26 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
           android:background="@color/black" />
-      <TextView
+      <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Moyens techniques " />
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_moyen_technique"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:tint="#737373"/>
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="5dp"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          android:text="Moyens techniques " />
+      </LinearLayout>
       <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -186,13 +249,26 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
           android:background="@color/black" />
-      <TextView
+      <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Moyens humains " />
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_moyens_humain"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:tint="#737373"/>
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="5dp"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          android:text="Moyens humains " />
+      </LinearLayout>
       <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -214,13 +290,26 @@
           android:orientation="vertical"
           android:visibility="gone"
           android:id="@+id/Item_Display_Outil_Layout_Attention">
-        <TextView
+        <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:padding="5dp"
-          android:textSize="16sp"
-          android:textStyle="bold"
-          android:text="Soyez vigilant sur ces points : " />
+          android:orientation="horizontal"
+          android:gravity="center">
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_soyez_vigilant"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:tint="#737373"/>
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Soyez vigilant sur ces points : " />
+        </LinearLayout>
         <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"

@@ -72,6 +72,7 @@ namespace QuelleFormationSecurite.Droid.Fragments
             if (lsResultsToShow == null)
                 lsResultsToShow = new List<TestResult>();
 
+            lsResultsToShow.Sort((a, b) => b.m_dateAnswer.CompareTo(a.m_dateAnswer));
             m_adapter.UpdateListeMarches(lsResultsToShow);
 
             if (lsResultsToShow.Count == 0)

@@ -12,9 +12,14 @@
       android:gravity="center"
       android:textSize="20sp" 
       android:layout_marginBottom="25dp"/>
-  <LinearLayout
-      android:id="@+id/Item_Display_Questions_layout_answers"
-      android:orientation="vertical"
+    <ScrollView
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"/>
+      android:layout_height="wrap_content">
+      <LinearLayout
+          android:id="@+id/Item_Display_Questions_layout_answers"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:enabled="false"/>
+      </ScrollView>
 </LinearLayout>

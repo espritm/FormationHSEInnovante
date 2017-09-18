@@ -9,6 +9,7 @@ namespace QuelleFormationSecurite.BusinessLayer
     public class Outil
     {
         public int m_iID { get; set; }
+        public int m_iImageResource { get; set; }
         public string m_sTitre { get; set; }
         public string m_sObjectif { get; set; }
         public string m_sPourquoi { get; set; }
@@ -24,6 +25,7 @@ namespace QuelleFormationSecurite.BusinessLayer
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("Identifiant : " + m_iID);
+            sb.AppendLine("ImageResource : " + m_iImageResource);
             sb.AppendLine("Titre : " + m_sTitre);
             sb.AppendLine("Objectif : " + m_sObjectif);
             sb.AppendLine("Pourquoi : " + m_sPourquoi);

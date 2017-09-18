@@ -45,6 +45,7 @@ namespace QuelleFormationSecurite.Droid.Adapters
             View view = null;
             Outil currentOutil = null;
             TextView textviewTitle = null;
+            ImageView imageviewTitle = null;
             TextView textviewObjectif = null;
             TextView textviewPourquoi = null;
             TextView textviewPublic = null;
@@ -61,6 +62,7 @@ namespace QuelleFormationSecurite.Droid.Adapters
                 currentOutil = this[position];
                 view = m_context.LayoutInflater.Inflate(Resource.Layout.Item_Display_Outil, null);
                 textviewTitle = view.FindViewById<TextView>(Resource.Id.Item_Display_Outil_Textview_Title);
+                imageviewTitle = view.FindViewById<ImageView>(Resource.Id.Item_Display_Outil_Imageview_Title);
                 textviewObjectif = view.FindViewById<TextView>(Resource.Id.Item_Display_Outil_Textview_Objectif);
                 textviewPourquoi = view.FindViewById<TextView>(Resource.Id.Item_Display_Outil_Textview_Pourquoi);
                 textviewPublic = view.FindViewById<TextView>(Resource.Id.Item_Display_Outil_Textview_Public);
@@ -80,6 +82,14 @@ namespace QuelleFormationSecurite.Droid.Adapters
                 textviewEntreprise.Text = currentOutil.m_sTypeEntreprise;
                 textviewTechnique.Text = currentOutil.m_sMoyenTechniques;
                 textviewHumain.Text = currentOutil.m_sMoyenHumain;
+
+                if (currentOutil.m_iImageResource > 0)
+                {
+                    imageviewTitle.Visibility = ViewStates.Visible;
+                    imageviewTitle.SetImageResource(currentOutil.m_iImageResource);
+                }
+                else
+                    imageviewTitle.Visibility = ViewStates.Gone;
 
                 if (currentOutil.m_sAttention == "")
                     layoutAttention.Visibility = ViewStates.Gone;

@@ -128,6 +128,11 @@ namespace QuelleFormationSecurite.Droid.Activities
              * question 4 : "Un ordinateur et un vidéo-projecteur"
              */
 
+            //Outil 5 : 
+            /*
+             * question 4 : "Accès internet (wifi ou autre) dans l'établissement"  et "Une enveloppe budgétaire pour d'éventuels éléments de jeux (téléphones plastiques, etc...)"
+             */
+
             TestQuestion q1 = m_lsQuestions.Find(q => q.m_iID == 1);
             TestQuestion q4 = m_lsQuestions.Find(q => q.m_iID == 4);
 
@@ -162,6 +167,13 @@ namespace QuelleFormationSecurite.Droid.Activities
                 m_Result.m_lsOutil.Add(m_lsOutil.Find(o => o.m_iID == 4));
             }
 
+            //Outil 5
+            if (q4.m_lsAnswer.Find(a => a.m_sTitle == "Accès internet (wifi ou autre) dans l'établissement").m_bIsSelected &&
+                q4.m_lsAnswer.Find(a => a.m_sTitle == "Une enveloppe budgétaire pour d'éventuels éléments de jeux (téléphones plastiques, etc...)").m_bIsSelected)
+            {
+                m_Result.m_lsOutil.Add(m_lsOutil.Find(o => o.m_iID == 5));
+            }
+
             //Vérifie qu'un moins 1 outil est proposé
             if (m_Result.m_lsOutil.Count == 0)
             {
@@ -173,7 +185,7 @@ namespace QuelleFormationSecurite.Droid.Activities
                    .SetCancelable(true)
                    .Show();
 
-                return;
+                return; 
             }
 
             //Record the answers into the result object in order to get them in the email
@@ -228,6 +240,7 @@ namespace QuelleFormationSecurite.Droid.Activities
             q4.AddAnswer(new QuestionAnswer("Une ou plusieurs lunette(s) de réalité virtuelle (VR)"));
             q4.AddAnswer(new QuestionAnswer("Une enveloppe budgétaire pour d'éventuels éléments de jeux (téléphones plastiques, etc...)"));
             q4.AddAnswer(new QuestionAnswer("Les personnes formées disposent de smartphone"));
+            q4.AddAnswer(new QuestionAnswer("Accès internet (wifi ou autre) dans l'établissement"));
             m_lsQuestions.Add(q4);
 
             TestQuestion q5 = new TestQuestion(5, "Dans quels milieux vont travailler les personnes à former ?", EnumAnswerType.Checkbox);
@@ -276,6 +289,7 @@ namespace QuelleFormationSecurite.Droid.Activities
             {
                 m_iID = 1,
                 m_sTitre = "Jeux question/réponse sur une thématique risque en particulier",
+                m_iImageResource = Resource.Drawable.ic_jeux_question_reponse,
                 m_sObjectif = "Faire un focus particulier sur un danger et le risque présent dans l’entreprise en impliquant les personnes dans la connaissance précise de ce risque spécifique. C’est un outil stratégique de démarche de prévention.",
                 m_sPourquoi = "Si l’entreprise a des problématiques et/ou une accidentologie plus forte sur un risque particulier, l’intérêt de cet outil est d’impliquer le personnel pour favoriser son apprentissage sur les bons gestes à effectuer/respecter pour éviter l’exposition à ce danger.",
                 m_sPublic = "Toute personne devant effectuer la formation générale à la sécurité. De 14 à 99 ans !",
@@ -291,6 +305,7 @@ namespace QuelleFormationSecurite.Droid.Activities
             {
                 m_iID = 2,
                 m_sTitre = "Jeux de rôle sur une situation particulière dangereuse dans l’entreprise",
+                m_iImageResource = Resource.Drawable.ic_jeux_de_role_sur_situation_dangereuse,
                 m_sObjectif = "Faire un focus particulier sur une situation dangereuse présente dans l’entreprise en impliquant les personnes à tenir des rôles différents pour apprendre à réagir correctement face à la situation dangereuse. C’est un outil stratégique de démarche de prévention.",
                 m_sPourquoi = "Si l’entreprise a des problématiques et/ou une accidentologie plus forte sur une situation dangereuse particulière, l’intérêt de cet outil est d’impliquer le personnel pour favoriser son apprentissage sur les bons gestes à effectuer/respecter pour éviter l’exposition à ce danger.",
                 m_sPublic = "Toute personne devant effectuer la formation générale à la sécurité. De 14 à 99 ans !",
@@ -306,6 +321,7 @@ namespace QuelleFormationSecurite.Droid.Activities
             {
                 m_iID = 3,
                 m_sTitre = "Visite entreprise + rallye photo sur les informations générales",
+                m_iImageResource = Resource.Drawable.ic_rallye_photo,
                 m_sObjectif = "Faire une visite d’entreprise pour repérer visuellement les dangers/risques et les moyens de prévention mis en place de l’environnement de travail. Puis laisser la personne formée évoluer sur le site dans un temps donné pour retrouver les informations demandées par le rallye photo. Cela facilitera son apprentissage pour retenir les éléments sécurité du site. C’est un outil stratégique de démarche de prévention.",
                 m_sPourquoi = "Si l’entreprise a des spécificités métiers avec des consignes sécurité particulières ou qu’elle souhaite impliquer davantage les personnes formées dans leur acquisition de connaissances sur les dangers/risques de l’entreprise, l’intérêt de cet outil est de laisser autonome la personne formée dans son apprentissage des bons gestes à effectuer/respecter pour éviter l’exposition à ce danger.",
                 m_sPublic = "Toute personne devant effectuer la formation générale à la sécurité. De 14 à 99 ans !",
@@ -331,6 +347,21 @@ namespace QuelleFormationSecurite.Droid.Activities
                 m_sAttention = ""
             };
             m_lsOutil.Add(r4);
+
+            Outil r5 = new Outil
+            {
+                m_iID = 5,
+                m_sTitre = "Jeux de piste avec FlashCode",
+                m_sObjectif = "Rendre la personne actrice de sa formation sécurité et/ou de la visite des locaux, favorisant l’apprentissage des risques et des gestes de préventions associés à des lieux de l’entreprise. C’est un outil de prévention des risques coûteux à mettre en place, mais permettant une autonomie complète de la part des formés. De plus, en dehors de la formation à la sécurité, chaque salarié pourra à nouveau flasher un FlashCode pour revoir les instructions associées, à tout moment.",
+                m_sPourquoi = "Si l’entreprise a de multiples spécificités métiers avec des consignes sécurité particulières, qu’elle souhaite impliquer davantage les personnes formées dans leur acquisition de connaissances sur les dangers/risques de l’entreprise, qu’elle souhaite une autonomie complète de la part des personnes formées, ou qu’elle souhaite laisser la possibilité aux personnes formées de revoir à tout moment et en autonomie une partie de la formation sécurité, l’intérêt de cet outil est de laisser autonome la personne formée dans son apprentissage des bons gestes à effectuer/respecter pour éviter l’exposition à ce danger.",
+                m_sPublic = "Toute personne devant effectuer la formation générale à la sécurité. De 14 à 99 ans !",
+                m_sParticipantDescription = "Entre 1 à X personnes",
+                m_sTypeEntreprise = "TPE/PME",
+                m_sMoyenTechniques = "Connexion wifi dans les locaux, étiquettes avec FlashCode",
+                m_sMoyenHumain = "",
+                m_sAttention = "Être vigilant sur : \n- Les autorisations d’accès ne permettant pas aux personnes formées de se déplacer seules."
+            };
+            m_lsOutil.Add(r5);
         }
 
         private void M_adapter_AnswerSelected(object sender, ListviewAdapter_Display_Questions.AnswerSelectedEventArgs args)
