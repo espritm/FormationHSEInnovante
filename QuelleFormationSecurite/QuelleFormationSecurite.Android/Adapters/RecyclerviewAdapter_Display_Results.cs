@@ -34,7 +34,7 @@ namespace QuelleFormationSecurite.Droid.Adapters
         {
             get { return m_lsResults == null ? 0 : m_lsResults.Count; }
         }
-
+        
         private void OnCardClicked(int position)
         {
             TestResult resultClicked = null;
@@ -89,8 +89,8 @@ namespace QuelleFormationSecurite.Droid.Adapters
 
                 //TODO : Get values to show..
                 //Title
-                string sTextviewTitleText = "Résultat du " + currentResult.m_dateAnswer.ToString("dd-MM-yyyy HH:mm");
-                string sTextviewDescriptionText = currentResult.m_lsOutil.Count.ToString() + " outil" + (currentResult.m_lsOutil.Count > 1 ? "s" : "") + " de formation proposé" + (currentResult.m_lsOutil.Count > 1 ? "s" : "") + ".";
+                string sTextviewTitleText = "RÃ©sultat du " + currentResult.m_dateAnswer.ToString("dd-MM-yyyy HH:mm");
+                string sTextviewDescriptionText = currentResult.m_lsOutil.Count.ToString() + " outil" + (currentResult.m_lsOutil.Count > 1 ? "s" : "") + " de formation proposÃ©" + (currentResult.m_lsOutil.Count > 1 ? "s" : "") + ".";
 
                 if (m_context == null || !m_Parent.IsAdded)
                     return;
