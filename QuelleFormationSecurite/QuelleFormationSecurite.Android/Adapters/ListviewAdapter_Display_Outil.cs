@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using Android.Content;
 
 namespace QuelleFormationSecurite.Droid.Adapters
-{
+{ 
     public class ListviewAdapter_Display_Outil : BaseAdapter<Outil>
     {
         Activity m_context;
@@ -104,10 +104,10 @@ namespace QuelleFormationSecurite.Droid.Adapters
                     Intent emailIntent = new Intent(Intent.ActionSendto);
                     emailIntent.SetType("text/plain");
                     emailIntent.SetData(Android.Net.Uri.Parse("mailto:camille.sartori@live.fr"));
-                    emailIntent.PutExtra(Intent.ExtraSubject, "Formation HSE Innovante - Demande de scénario spécifique");
-                    emailIntent.PutExtra(Intent.ExtraText, "Bonjour,\nJe souhaite un scénario personnalisé vis à vis de mes réponses ci-dessous svp :) \n\n" + m_Result.ToStringForEmail() + "\n\n" + currentOutil.ToString());
+                    emailIntent.PutExtra(Intent.ExtraSubject, "Formation HSE Innovante - Demande de scÃ©nario spÃ©cifique");
+                    emailIntent.PutExtra(Intent.ExtraText, "Bonjour,\nJe souhaite un scÃ©nario personnalisÃ© vis Ã  vis de mes rÃ©ponses ci-dessous svp :) \n\n" + m_Result.ToStringForEmail() + "\n\n" + currentOutil.ToString());
 
-                    m_context.StartActivity(Intent.CreateChooser(emailIntent, "Demander un scénario personnalisé"));
+                    m_context.StartActivity(Intent.CreateChooser(emailIntent, "Demander un scÃ©nario personnalisÃ©"));
                 };
             }
             catch (Exception)
