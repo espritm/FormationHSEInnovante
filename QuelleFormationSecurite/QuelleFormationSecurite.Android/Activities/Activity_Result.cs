@@ -73,7 +73,7 @@ namespace QuelleFormationSecurite.Droid.Activities
             string sJsonResult = Intent.Extras.GetString("JsonResult");
             m_Result = JSON.DeserializeObject<TestResult>(sJsonResult, "");
         }
-
+ 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             switch (item.ItemId)
