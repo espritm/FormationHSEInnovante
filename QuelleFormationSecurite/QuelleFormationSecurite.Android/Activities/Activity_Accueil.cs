@@ -15,7 +15,7 @@ namespace QuelleFormationSecurite.Droid
 {
 	[Activity (Icon = "@drawable/icon")]
 	public class Activity_Accueil : AppCompatActivity
-    {
+    { 
         DrawerLayout m_drawerLayout;
         NavigationView m_navigationView;
         Fragment_List_Results m_fragmentAccueil;
