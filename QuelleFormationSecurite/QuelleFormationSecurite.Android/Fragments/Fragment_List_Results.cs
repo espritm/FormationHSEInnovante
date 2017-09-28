@@ -11,7 +11,7 @@ using QuelleFormationSecurite.Droid.Utils;
 using QuelleFormationSecurite.Helpers;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-
+ 
 namespace QuelleFormationSecurite.Droid.Fragments
 {
     public class Fragment_List_Results : Fragment
