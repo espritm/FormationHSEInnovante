@@ -17,6 +17,7 @@ namespace QuelleFormationSecurite.Droid.Fragments
 
             try
             {
+            //mon commentaire
                 view = inflater.Inflate(Resource.Layout.Fragment_LegalTerms, null);
 
                 m_textviewDescEditor = view.FindViewById<TextView>(Resource.Id.fragmentLegalTerms_textview_DescEditor);
